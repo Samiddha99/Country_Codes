@@ -131,20 +131,3 @@ dmypy.json
 
 #Database
 db.sqlite3
-
-#Media Files
-assets/media
-
-assets/staticfiles/v-1/*
-!assets/staticfiles/v-1/.gitkeep
-!assets/staticfiles/v-1/staticfiles.json
-
-assets/static/*
-!assets/static/.gitkeep
-
-
-#others
-database-*.text
-# Dockerfile
-# .dockerignore
-# fly.toml
