@@ -36,7 +36,11 @@ DEPLOY = config("DEPLOY", default=True, cast=bool)
 ALLOWED_HOSTS = config('DOMAIN_NAME', default='127.0.0.1:8000', cast=Csv(str))
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='127.0.0.1:8000', cast=Csv(str))
 
-
+RATELIMIT_CACHE_PREFIX = "portfolio_rate_limit"
+RATELIMIT_ENABLE = True
+RATELIMIT_USE_CACHE = "default"
+#RATELIMIT_VIEW = 'app.views.rateLimitView'
+DEFAULT_VIEW_RATE_LIMIT = '5000/h'
 
 # Application definition
 
