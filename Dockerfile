@@ -3,6 +3,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 FROM python:${PYTHON_VERSION}
 
+ARG PORT
+ENV PORT=$PORT
+
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
@@ -31,7 +34,7 @@ RUN set -ex && \
 COPY . /code
 
 #public the port so that it can access over the internet
-#EXPOSE 8000
+EXPOSE $PORT
 
 RUN python manage.py migrate
 RUN python manage.py collectstatic --noinput
