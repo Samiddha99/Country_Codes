@@ -40,7 +40,7 @@ RATELIMIT_CACHE_PREFIX = "portfolio_rate_limit"
 RATELIMIT_ENABLE = True
 RATELIMIT_USE_CACHE = "default"
 #RATELIMIT_VIEW = 'app.views.rateLimitView'
-DEFAULT_VIEW_RATE_LIMIT = '5000/h'
+DEFAULT_VIEW_RATE_LIMIT = '1000/m'
 
 # Application definition
 
